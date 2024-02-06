@@ -2,10 +2,9 @@ import { Api } from '@/services/Api'
 
 export async function LoginRequest (email: string, password: string) {
     try {
-        const response = await Api.post('login', { email, password })
-        console.log(response)
+        const requestLogin = await Api.post('login', { email, password })
 
-        return response.data
+        return requestLogin.data
     } catch (err) {
 
         console.error('LOGIN ERROR:util.ts', err)
