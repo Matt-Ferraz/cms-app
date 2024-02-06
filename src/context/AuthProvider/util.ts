@@ -1,7 +1,7 @@
 import { Api } from '@/services/Api'
 import { IUser } from './types'
 
-export function setUserLocalStorage(user: IUser) {
+export function setUserLocalStorage(user: IUser | null) {
     localStorage.setItem('usr', JSON.stringify(user))
 } 
 
